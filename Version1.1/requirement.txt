@@ -1,3 +1,4 @@
 selenium==3.11.0
 ddddocr
 pytesseract
+configparser==5.2.0
