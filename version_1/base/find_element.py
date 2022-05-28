@@ -19,6 +19,7 @@ class FindElement:
 
         read_ini = ReadIni()
         data = read_ini.get_value(key)
+        # 数值分割
         by = data.split(">")[0]
         value = data.split(">")[1]
         self.logger.info("定位方式："+by+"---------->定位值："+value)
