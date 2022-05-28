@@ -6,7 +6,7 @@ import configparser
 class ReadIni:
     def __init__(self, file_name=None, node=None):
         if file_name == None:
-            file_name = "C:/Users/Administrator/PycharmProjects/selenium_ui_project/Version1.1/config/LocalElement.ini"
+            file_name = "/version_1/config/LocalElement.ini"
         if node == None:
             self.node = "RegisterElement"
         else:
