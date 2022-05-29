@@ -1,12 +1,12 @@
 # coding=utf-8
 import configparser
-
+import sys
 # 读取配置文件信息
 
 class ReadIni:
     def __init__(self, file_name=None, node=None):
         if file_name == None:
-            file_name = "/version_1/config/LocalElement.ini"
+            file_name = "C:/Users/Administrator/PycharmProjects/selenium_ui_project/version_1/config/LocalElement.ini"
         if node == None:
             self.node = "RegisterElement"
         else:
@@ -19,7 +19,9 @@ class ReadIni:
         cf.read(file_name)
         return cf
 
-    def get_value(self,key):
+        # 获取value得值
+
+    def get_value(self, key):
         data = self.cf.get(self.node, key)
         return data
 

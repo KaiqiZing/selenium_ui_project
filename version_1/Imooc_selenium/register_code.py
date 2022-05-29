@@ -45,9 +45,9 @@ def readimage(save_path):
     top = code_element.location['y']
     right = code_element.size['width'] + left
     height = code_element.size['height'] + top
-    open_image = Image.open("save_path")
+    open_image = Image.open(save_path)
     crop_image = open_image.crop((left,top,right,height)) #截取验证码图片
-    crop_image.save("save_path")  # 保存截取验证码后的图片
+    crop_image.save(save_path)  # 保存截取验证码后的图片
 
     code_image_ocr = ddddocr.DdddOcr(old=True)  # 开启old使用旧模型准确率更高，也可以关闭
     with open("save_path", "rb") as f:
@@ -58,7 +58,7 @@ def readimage(save_path):
 def run_main():
     user_name_info = get_range_user()
     user_email = user_name_info+"@163.com"
-    file_name = "save_path"
+    file_name = "D:/mooc_images/test.png"
     driver_init()
     # 发送用户名
     get_element("register_email").send_keys(user_email)
@@ -68,7 +68,6 @@ def run_main():
     get_element("captcha_code").send_keys(result_image)
     get_element("register-btn").click()
     driver.close()
-
 
 run_main()
 
