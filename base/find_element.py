@@ -6,6 +6,8 @@ class FindElement(object):
         self.driver = driver
         get_user_log = UserLog()
         self.logger = get_user_log.get_log()
+
+
     def get_element(self,key):
         read_ini = ReadIni()
         data = read_ini.get_value(key)
