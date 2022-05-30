@@ -43,7 +43,7 @@ if __name__ == '__main__':
     # suite.addTest([FirstCase01('testfirst02'),FirstCase01('testfirst04')])
     # 有效方法
     suite.addTests([FirstCase01('testfirst02'),FirstCase01('testfirst04')])
-    runner = unittest.TextTestRunner(verbosity=1)
+    runner = unittest.TextTestRunner(verbosity=2)
     runner.run(suite)
 """
 1、注意区分addTest and addTests的区别；
