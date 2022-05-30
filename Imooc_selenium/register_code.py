@@ -58,7 +58,6 @@ def run_main():
     get_element("captcha_code").send_keys(text)
     get_element("register-btn").click()
     driver.close()
-
 run_main()
 
 
