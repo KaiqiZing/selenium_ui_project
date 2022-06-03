@@ -9,7 +9,7 @@ class DataTest(unittest.TestCase):
         print("这个是setup")
     def tearDown(self):
         print("这个是teardown")
-    #邮箱、用户名、密码、验证码、错误信息定位元素、错误提示信息
+    # 邮箱、用户名、密码、验证码、错误信息定位元素、错误提示信息
     @ddt.data(
         [1,2],
         [3,4],

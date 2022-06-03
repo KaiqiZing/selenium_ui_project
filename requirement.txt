@@ -1,0 +1,7 @@
+selenium==3.11.0
+ddddocr
+xlrd==1.2.0
+configparser
+ddt
+
+

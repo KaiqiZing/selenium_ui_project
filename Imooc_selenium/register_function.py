@@ -1,7 +1,6 @@
-#coding=utf-8
+# coding=utf-8
 import sys
 import ddddocr
-sys.path.append('C:/Users/Administrator/PycharmProjects/selenium_ui_project')
 from selenium import webdriver
 import time
 import random
@@ -11,7 +10,8 @@ from base.find_element import FindElement
 
 class RegisterFunction(object):
     def __init__(self,url,i):
-        self.driver = self.get_driver(url,i)
+        self.driver = self.get_driver(url, i)
+
     #获取driver并且打开url
     def get_driver(self,url,i):
         if i == 1:
@@ -66,7 +66,7 @@ class RegisterFunction(object):
         # 邮箱
         user_email = user_name_info+"@163.com"
         # 截图地址
-        file_name = "D:/mooc_images/test.png"
+        file_name = "/Volumes/DATAS2T/mooc_images/est.png"
         code_text = self.get_code_image(file_name)
         self.send_user_info('user_email',user_email)
         self.send_user_info('user_name',user_name_info)
@@ -78,7 +78,7 @@ class RegisterFunction(object):
             print("注册成功")
         else:
             # 错误截图地址
-            self.driver.save_screenshot("D:/mooc_images/test1.png")
+            self.driver.save_screenshot("/Volumes/DATAS2T/mooc_images/error_element/test_error.png")
         time.sleep(5)
         self.driver.close()
     

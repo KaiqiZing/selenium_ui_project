@@ -1,6 +1,8 @@
 from PIL import Image
 import time
 import ddddocr
+
+
 class GetCode:
     """
     封装图片验证码接口，以备使用
@@ -11,7 +13,7 @@ class GetCode:
 
     def get_code_image(self,file_name):
         self.driver.save_screenshot(file_name)
-        code_element = self.driver.find_element_by_id("code_image")
+        code_element = self.driver.find_element_by_id("getcode_num")
         left = code_element.location['x']
         top = code_element.location['y']
         right = code_element.size['width']+left
@@ -31,3 +33,8 @@ class GetCode:
             image = f.read()
         code = oct.classification(image)
         return code
+
+
+
+
+

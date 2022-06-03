@@ -21,8 +21,8 @@ class RegisterHandle:
         self.register_p.get_username_element().send_keys(username)
 
     def send_user_password(self, password):
-        self.logger.info("输入密码是:"+ password)
-        self.register_p.get_password_element()
+        self.logger.info("输入密码是:"+password)
+        self.register_p.get_password_element().send_keys(password)
 
     def send_user_code(self, file_name):
         get_code_text = GetCode(self.driver)
@@ -44,17 +44,13 @@ class RegisterHandle:
             else:
 
                 text = self.register_p.get_code_error_element().text
-
         except:
-
             text = None
-
         return text
-
 
     # 点击注册按钮，获取文字西信息
     def register_button_click(self):
         self.register_p.get_button_element().click()
 
     def register_text_info(self):
-        return self.register_p.get_button_element()
+        return self.register_p.get_button_element().text

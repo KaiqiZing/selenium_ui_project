@@ -3,7 +3,7 @@ import configparser
 class ReadIni(object):
     def __init__(self,file_name=None,node=None):
         if file_name == None:
-            file_name = "E:/SeleniumPythonImooc-master/config/LocalElement.ini"
+            file_name = "/Users/kaiqi/PycharmProjects/selenium_ui_project/config/LocalElement.ini"
         if node == None:
             self.node = "RegisterElement"
         else:
