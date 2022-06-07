@@ -16,7 +16,7 @@ class ExcelUtil:
         """
 
         if excel_path == None:
-            self.excel_path = ""
+            self.excel_path = "/Users/kaiqi/PycharmProjects/selenium_ui_project/config/casedata.xls"
         else:
             self.excel_path = excel_path
         if index == None:

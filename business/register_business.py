@@ -31,13 +31,23 @@ class RegisterBusiness:
 
 
     # ddt 数据驱动使用函数,Notice:该方法必须放在user_base下方，不然无法执行
-    def register_function(self, email, username, password, code, assertCode, assertText):
-        self.user_base(email, username, password, code)
+    # def register_function(self, email, username, password, code, assertCode, assertText):
+    #     self.user_base(email, username, password, code)
+    #     if self.register_h.get_user_text(assertCode, assertText) == None:
+    #         # print("邮箱检验不成功")
+    #         return True
+    #     else:
+    #         return False
+
+    def register_function(self, email, username, password, file_name, assertCode, assertText):
+        self.user_base(email, username, password, file_name)
         if self.register_h.get_user_text(assertCode, assertText) == None:
             # print("邮箱检验不成功")
             return True
         else:
             return False
+
+
     def login_name_error(self, email, name, password, file_name):
 
         self.user_base(email, name, password, file_name)
